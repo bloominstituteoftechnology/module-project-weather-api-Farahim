@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5984af93-aa37-4c60-ae9b-709d6f3370bb" name="localhost" url="http://localhost:3003">
+        <fileTransfer mountedRoot="C:\Users\farah\Projects\sprint-5\mod-4" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

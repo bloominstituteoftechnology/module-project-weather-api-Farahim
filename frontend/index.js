@@ -5,6 +5,8 @@ async function moduleProject4() {
   const currentYear = new Date().getFullYear()
   footer.textContent = `© BLOOM INSTITUTE OF TECHNOLOGY ${currentYear}`
 
+
+
   let descriptions = [
     ["Sunny", "☀️"],
     ["Cloudy", "☁️"],
@@ -15,6 +17,25 @@ async function moduleProject4() {
   ]
 
   // 👉 Tasks 1 - 5 go here
+  document.querySelector('#weatherWidget').style.display = 'none';
+  document.querySelector('#citySelect').addEventListener('change', async evt =>{
+    try{
+      document.querySelector(`#citySelect`).setAttribute(`disabled`, `disabled`);
+      document.querySelector('#weatherWidget').style.display = 'none';
+      document.querySelector('.info').textContent = 'Fetching weather data...';
+
+      let city = evt.target.value;
+      let url= `http://localhost:3003/api.weather?city=${city}`;
+
+      const res = await axios.get(url);
+     // document.querySelector('#weatherWidget').style.display = 'block';
+    //  document.querySelector('.info').textContent = '';
+   //   evt.target.removeAttribute('disabled');
+      console.log(res.data);
+    }catch (err){
+
+    }
+  })
 
   // 👆 WORK WORK ABOVE THIS LINE 👆
 
